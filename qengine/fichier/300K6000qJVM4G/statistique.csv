@@ -1,0 +1,3 @@
+
+Date;type de lancement;Input Data;Input Requete;Nombre Triplet;Nombre requete;Temps Data Moteur;Temps Data Jena;Temps Parse Requêtes;Temps reponse Moteur;Temps reponse Jena;Temps Programme
+2022-01-02 13-17-45;MoteurColdWithJena;data\300K.nt;6000q.queryset;323754;6000;707723;5265;786;1541;2774;720007

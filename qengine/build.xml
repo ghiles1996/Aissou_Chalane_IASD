@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="qengine">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-http-client/3.7.3/rdf4j-http-client-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar"/>
+        <pathelement location="../../../../.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar"/>
+        <pathelement location="../../../../.m2/repository/org/slf4j/jcl-over-slf4j/1.7.31/jcl-over-slf4j-1.7.31.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-http-protocol/3.7.3/rdf4j-http-protocol-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar"/>
+        <pathelement location="../../../../.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-model-api/3.7.3/rdf4j-model-api-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-model-vocabulary/3.7.3/rdf4j-model-vocabulary-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-model/3.7.3/rdf4j-model-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar"/>
+        <pathelement location="../../../../.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
+        <pathelement location="../../../../.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-query/3.7.3/rdf4j-query-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar"/>
+        <pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar"/>
+        <pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryalgebra-model/3.7.3/rdf4j-queryalgebra-model-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryparser-api/3.7.3/rdf4j-queryparser-api-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryparser-serql/3.7.3/rdf4j-queryparser-serql-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryparser-sparql/3.7.3/rdf4j-queryparser-sparql-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryrender/3.7.3/rdf4j-queryrender-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-api/3.7.3/rdf4j-queryresultio-api-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-binary/3.7.3/rdf4j-queryresultio-binary-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-sparqljson/3.7.3/rdf4j-queryresultio-sparqljson-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-sparqlxml/3.7.3/rdf4j-queryresultio-sparqlxml-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-text/3.7.3/rdf4j-queryresultio-text-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/com/opencsv/opencsv/4.6/opencsv-4.6.jar"/>
+        <pathelement location="../../../../.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar"/>
+        <pathelement location="../../../../.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-api/3.7.3/rdf4j-repository-api-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-contextaware/3.7.3/rdf4j-repository-contextaware-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-event/3.7.3/rdf4j-repository-event-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-http/3.7.3/rdf4j-repository-http-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-manager/3.7.3/rdf4j-repository-manager-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-repository-sparql/3.7.3/rdf4j-repository-sparql-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-api/3.7.3/rdf4j-rio-api-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/com/github/jsonld-java/jsonld-java/0.13.3/jsonld-java-0.13.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-binary/3.7.3/rdf4j-rio-binary-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-datatypes/3.7.3/rdf4j-rio-datatypes-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-jsonld/3.7.3/rdf4j-rio-jsonld-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/httpcomponents/httpclient-cache/4.5.13/httpclient-cache-4.5.13.jar"/>
+        <pathelement location="../../../../.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-languages/3.7.3/rdf4j-rio-languages-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-n3/3.7.3/rdf4j-rio-n3-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-nquads/3.7.3/rdf4j-rio-nquads-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-ntriples/3.7.3/rdf4j-rio-ntriples-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-rdfjson/3.7.3/rdf4j-rio-rdfjson-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-rdfxml/3.7.3/rdf4j-rio-rdfxml-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-trig/3.7.3/rdf4j-rio-trig-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-trix/3.7.3/rdf4j-rio-trix-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-rio-turtle/3.7.3/rdf4j-rio-turtle-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-sparqlbuilder/3.7.3/rdf4j-sparqlbuilder-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/eclipse/rdf4j/rdf4j-util/3.7.3/rdf4j-util-3.7.3.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-arq/3.9.0/jena-arq-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-shaded-guava/3.9.0/jena-shaded-guava-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-core/3.9.0/jena-core-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-iri/3.9.0/jena-iri-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-base/3.9.0/jena-base-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/commons/commons-csv/1.5/commons-csv-1.5.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/commons/commons-compress/1.17/commons-compress-1.17.jar"/>
+        <pathelement location="../../../../.m2/repository/com/github/andrewoma/dexx/collection/0.7/collection-0.7.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-tdb/3.9.0/jena-tdb-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-rdfconnection/3.9.0/jena-rdfconnection-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-cmds/3.9.0/jena-cmds-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-tdb2/3.9.0/jena-tdb2-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-dboe-trans-data/3.9.0/jena-dboe-trans-data-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-dboe-transaction/3.9.0/jena-dboe-transaction-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-dboe-base/3.9.0/jena-dboe-base-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/apache/jena/jena-dboe-index/3.9.0/jena-dboe-index-3.9.0.jar"/>
+        <pathelement location="../../../../.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar"/>
+        <pathelement location="../../../../.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+        <pathelement location="../../../../.m2/repository/org/slf4j/slf4j-api/1.7.31/slf4j-api-1.7.31.jar"/>
+    </path>
+    <path id="qengine.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Main (12).classpath">
+        <path refid="qengine.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <classpath refid="qengine.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <classpath refid="qengine.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Main (12)">
+        <java classname="qengine.program.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (12).classpath"/>
+        </java>
+    </target>
+</project>
